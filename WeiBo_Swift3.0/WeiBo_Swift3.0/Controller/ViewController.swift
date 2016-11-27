@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        print("start====")
+        let weibos: [Weibo] = plistToWeibos()
+       for weibo in weibos {
+            print(weibo.name!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func plistToWeibos() -> [Weibo] {
+        let path = Bundle.main.path(forResource: "weibos.plist", ofType: nil)
+        
+        let plistArray = NSArray(contentsOfFile: path!)
+        
+        let weiboArray: [Weibo] = Weibo.dictModel(list: plistArray! as! [[String : AnyObject]])
+        
+        return weiboArray
+        
+    }
 }
 

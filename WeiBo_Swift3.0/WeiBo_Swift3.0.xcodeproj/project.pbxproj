@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A24EF811DE99011004F325F /* Weibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24EF801DE99011004F325F /* Weibo.swift */; settings = {COMPILER_FLAGS = Reflect.swift; }; };
 		1A2E7BEA1DE718C20064F10B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E7BE91DE718C20064F10B /* AppDelegate.swift */; };
 		1A2E7BEF1DE718C20064F10B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E7BED1DE718C20064F10B /* Main.storyboard */; };
 		1A2E7BF11DE718C20064F10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E7BF01DE718C20064F10B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A24EF801DE99011004F325F /* Weibo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weibo.swift; sourceTree = "<group>"; };
 		1A2E7BE61DE718C20064F10B /* WeiBo_Swift3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo_Swift3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2E7BE91DE718C20064F10B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A2E7BEE1DE718C20064F10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				1A2E7BF01DE718C20064F10B /* Assets.xcassets */,
 				1A2E7BF21DE718C20064F10B /* LaunchScreen.storyboard */,
 				1A2E7BF51DE718C20064F10B /* Info.plist */,
+				1A2E7C051DE71D700064F10B /* Framework */,
 			);
 			path = WeiBo_Swift3.0;
 			sourceTree = "<group>";
@@ -79,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1A2E7C021DE719E30064F10B /* weibos.plist */,
+				1A24EF801DE99011004F325F /* Weibo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +93,13 @@
 				1A2E7BED1DE718C20064F10B /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1A2E7C051DE71D700064F10B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +135,7 @@
 					1A2E7BE51DE718C20064F10B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = T9A27F8Q5D;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -167,6 +179,7 @@
 			files = (
 				1A2E7C001DE719DA0064F10B /* ViewController.swift in Sources */,
 				1A2E7BEA1DE718C20064F10B /* AppDelegate.swift in Sources */,
+				1A24EF811DE99011004F325F /* Weibo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +342,7 @@
 				1A2E7BFA1DE718C20064F10B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
