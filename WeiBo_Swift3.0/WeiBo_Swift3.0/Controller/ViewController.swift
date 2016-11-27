@@ -9,14 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var weibos = [Weibo]()
+    var weiBoView: UITableView!
+    let screenBounds = UIScreen.main.bounds
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("start====")
-        let weibos: [Weibo] = plistToWeibos()
-       for weibo in weibos {
-            print(weibo.name!)
-        }
+        
+        let tableView = UITableView.init(frame: screenBounds)
+        self.weiBoView = tableView
+        self.view.addSubview(tableView)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +28,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
     func plistToWeibos() -> [Weibo] {
         let path = Bundle.main.path(forResource: "weibos.plist", ofType: nil)
         
