@@ -12,10 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        LSLog(messsage: "+++++++++++++++234234")
+        
         return true
     }
 
@@ -40,7 +44,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    public func LSLog<T>(messsage : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
+        
+        #if DEBUG
+            
+            let fileName = (file as NSString).lastPathComponent
+            
+            print("\(fileName):(\(lineNum))-\(messsage)")
+            
+        #endif
+    }
+    
 }
 

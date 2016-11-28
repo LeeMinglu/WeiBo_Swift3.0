@@ -128,6 +128,7 @@
 		1A2E7BDE1DE718C20064F10B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LS;
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = SocererGroup;
@@ -241,7 +242,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Debug;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -295,8 +296,10 @@
 				DEVELOPMENT_TEAM = T9A27F8Q5D;
 				INFOPLIST_FILE = WeiBo_Swift3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SocererGroup.WeiBo-Swift3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;

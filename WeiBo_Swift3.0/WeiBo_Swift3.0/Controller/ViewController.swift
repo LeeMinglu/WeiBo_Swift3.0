@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.weiBoView.dataSource = self
         
         self.weibos = plistToWeibos()
+        
 
     }
 
@@ -51,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-//        print ("**********" + "\(self.weibos.count)")
+        
         return self.weibos.count
         
     }
