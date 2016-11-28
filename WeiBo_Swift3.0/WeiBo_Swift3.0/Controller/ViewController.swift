@@ -33,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.weiBoView.delegate = self
         self.weiBoView.dataSource = self
         
+        //设置微博数组
         self.weibos = plistToWeibos()
         
 
