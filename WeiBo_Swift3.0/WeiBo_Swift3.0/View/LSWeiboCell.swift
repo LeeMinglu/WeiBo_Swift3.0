@@ -15,6 +15,9 @@ class LSWeiboCell: UITableViewCell {
     var picView: UIImageView!
     var textView: UILabel!
     
+    let fontLbName = UIFont.systemFont(ofSize: 15)
+    let fontLbText = UIFont.systemFont(ofSize: 13)
+    
     //2.重写frame的方法
     var weiBoFrame: LSWeiboFrame! {
         didSet {
@@ -32,10 +35,10 @@ class LSWeiboCell: UITableViewCell {
             self.nameLabel.text = weiBo.name!
             self.textView.text = weiBo.text!
             if weiBo.vip {
-                self.textLabel!.textColor = UIColor.red
+                self.nameLabel!.textColor = UIColor.red
                 self.vipView.isHidden = false
             }else {
-                self.textLabel!.textColor = UIColor.gray
+                self.nameLabel!.textColor = UIColor.blue
                 self.vipView.isHidden = true
             }
             
@@ -69,7 +72,10 @@ class LSWeiboCell: UITableViewCell {
             self.addSubview(iconImageView)
         
             let name = UILabel.init()
+            name.sizeToFit()
+            name.adjustsFontSizeToFitWidth = true
             nameLabel = name
+            name.font = fontLbName
             self.addSubview(self.nameLabel)
         
             let vipView = UIImageView.init(image: UIImage.init(named: "vip"))
@@ -78,6 +84,10 @@ class LSWeiboCell: UITableViewCell {
             self.addSubview(self.vipView)
         
             let textView = UILabel.init()
+            textView.font = fontLbText
+            textView.sizeToFit()
+            textView.numberOfLines = 0
+            textView.adjustsFontSizeToFitWidth = true
             self.textView = textView
             self.addSubview(self.textView)
         

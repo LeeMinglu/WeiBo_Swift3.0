@@ -66,14 +66,14 @@ class LSWeiboFrame: NSObject {
             let picX = margin
             let picW:CGFloat = 100
             let picH:CGFloat = 100
-            let picY = textFrame!.maxY
+            let picY = textFrame!.maxY + margin
             self.picFrame = CGRect(x: picX, y: picY, width: picW, height: picH)
             
             if weiBo.picture == nil{
-                self.cellHeight = self.textFrame!.maxY
+                self.cellHeight = self.textFrame!.maxY + margin
             } else {
                 
-                self.cellHeight = self.picFrame!.maxY
+                self.cellHeight = self.picFrame!.maxY + margin
                 
             }
         }
