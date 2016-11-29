@@ -14,6 +14,8 @@
 		1A2E7C031DE719E30064F10B /* weibos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E7C021DE719E30064F10B /* weibos.plist */; };
 		1A8BA0251DEAC2E30077E449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BA0241DEAC2E30077E449 /* ViewController.swift */; };
 		1A8BA0271DEAC3350077E449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8BA0261DEAC3350077E449 /* Main.storyboard */; };
+		1AEA2B351DEC5B4A0050EFE6 /* LSWeiboFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA2B341DEC5B4A0050EFE6 /* LSWeiboFrame.swift */; };
+		1AEA2B391DEC62F70050EFE6 /* LSWeiboCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA2B381DEC62F70050EFE6 /* LSWeiboCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1A2E7C021DE719E30064F10B /* weibos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weibos.plist; sourceTree = "<group>"; };
 		1A8BA0241DEAC2E30077E449 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A8BA0261DEAC3350077E449 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1AEA2B341DEC5B4A0050EFE6 /* LSWeiboFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSWeiboFrame.swift; sourceTree = "<group>"; };
+		1AEA2B381DEC62F70050EFE6 /* LSWeiboCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSWeiboCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			children = (
 				1A2E7C021DE719E30064F10B /* weibos.plist */,
 				1A24EF801DE99011004F325F /* Weibo.swift */,
+				1AEA2B341DEC5B4A0050EFE6 /* LSWeiboFrame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				1A8BA0261DEAC3350077E449 /* Main.storyboard */,
+				1AEA2B381DEC62F70050EFE6 /* LSWeiboCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8BA0251DEAC2E30077E449 /* ViewController.swift in Sources */,
+				1AEA2B391DEC62F70050EFE6 /* LSWeiboCell.swift in Sources */,
+				1AEA2B351DEC5B4A0050EFE6 /* LSWeiboFrame.swift in Sources */,
 				1A2E7BEA1DE718C20064F10B /* AppDelegate.swift in Sources */,
 				1A24EF811DE99011004F325F /* Weibo.swift in Sources */,
 			);
@@ -242,6 +250,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Debug;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -284,6 +293,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -296,6 +306,7 @@
 				DEVELOPMENT_TEAM = T9A27F8Q5D;
 				INFOPLIST_FILE = WeiBo_Swift3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SocererGroup.WeiBo-Swift3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,6 +322,7 @@
 				DEVELOPMENT_TEAM = T9A27F8Q5D;
 				INFOPLIST_FILE = WeiBo_Swift3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SocererGroup.WeiBo-Swift3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

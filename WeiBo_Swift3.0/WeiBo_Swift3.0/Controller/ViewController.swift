@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var weibos = [Weibo]()
+    
     var weiBoView: UITableView!
     let screenBounds = UIScreen.main.bounds
     
@@ -27,14 +27,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         //注册cell
-        self.weiBoView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        self.weiBoView.register(LSWeiboCell.self, forCellReuseIdentifier: identifier)
         
         // MARK: --  让控制器成为代理--
         self.weiBoView.delegate = self
         self.weiBoView.dataSource = self
-        
-        //设置微博数组
-        self.weibos = plistToWeibos()
         
 
     }
@@ -54,23 +51,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return self.weibos.count
+        return self.weiboFrames.count
         
     }
     
     
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! LSWeiboCell
         
         //获取模型
-        let weibo = self.weibos[indexPath.row]
-        cell.textLabel!.text = weibo.name!
+        let weiboFame = self.weiboFrames[indexPath.row]
+        cell.weiBoFrame = weiboFame
+        
      
      // Configure the cell...
        
      return cell
      }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let weiboFrame = self.weiboFrames[indexPath.row]
+        let cellHeight = weiboFrame.cellHeight
+        return cellHeight
+    }
     
     /*
      // Override to support conditional editing of the table view.
@@ -118,15 +121,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      */
 
     
-    func plistToWeibos() -> [Weibo] {
+    var weiboFrames: [LSWeiboFrame] = {
         let path = Bundle.main.path(forResource: "weibos.plist", ofType: nil)
         
         let plistArray = NSArray(contentsOfFile: path!)
         
         let weiboArray: [Weibo] = Weibo.dictModel(list: plistArray! as! [[String : AnyObject]])
+        var weiboFrameArray: [LSWeiboFrame] = []
+        for weibo in weiboArray {
+            let weiboFrame = LSWeiboFrame.init()
+            weiboFrame.weiBo = weibo
+            
+            weiboFrameArray.append(weiboFrame)
+        }
+            return weiboFrameArray
         
-        return weiboArray
-        
-    }
+    }()
 }
 
