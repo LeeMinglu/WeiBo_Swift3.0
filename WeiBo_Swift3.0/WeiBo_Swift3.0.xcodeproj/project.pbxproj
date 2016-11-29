@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A24EF811DE99011004F325F /* Weibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24EF801DE99011004F325F /* Weibo.swift */; };
+		1A2A97A31DED557700C01CD3 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A97A21DED557700C01CD3 /* String+Extention.swift */; };
 		1A2E7BEA1DE718C20064F10B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E7BE91DE718C20064F10B /* AppDelegate.swift */; };
 		1A2E7BF11DE718C20064F10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E7BF01DE718C20064F10B /* Assets.xcassets */; };
 		1A2E7BF41DE718C20064F10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E7BF21DE718C20064F10B /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		1A24EF801DE99011004F325F /* Weibo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weibo.swift; sourceTree = "<group>"; };
+		1A2A97A21DED557700C01CD3 /* String+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
 		1A2E7BE61DE718C20064F10B /* WeiBo_Swift3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo_Swift3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2E7BE91DE718C20064F10B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A2E7BF01DE718C20064F10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		1A2E7C051DE71D700064F10B /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1A2A97A21DED557700C01CD3 /* String+Extention.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8BA0251DEAC2E30077E449 /* ViewController.swift in Sources */,
+				1A2A97A31DED557700C01CD3 /* String+Extention.swift in Sources */,
 				1AEA2B391DEC62F70050EFE6 /* LSWeiboCell.swift in Sources */,
 				1AEA2B351DEC5B4A0050EFE6 /* LSWeiboFrame.swift in Sources */,
 				1A2E7BEA1DE718C20064F10B /* AppDelegate.swift in Sources */,

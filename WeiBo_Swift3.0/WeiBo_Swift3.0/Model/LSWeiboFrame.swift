@@ -82,13 +82,13 @@ class LSWeiboFrame: NSObject {
     }
     
     //计算文本大小
-    func sizeWithText(_ text: NSString, font: UIFont, maxSize: CGSize)->CGSize {
-        //定义一个字体
-        let attrs: NSDictionary = [font: NSFontAttributeName]
-        
-        let size = text.boundingRect(with: maxSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs as? [String : AnyObject], context: nil).size
-        return size
-    }
+//    func sizeWithText(_ text: NSString, font: UIFont, maxSize: CGSize)->CGSize {
+//        //定义一个字体
+//        let attrs: NSDictionary = [font: NSFontAttributeName]
+//        
+//        let size = text.boundingRect(with: maxSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs as? [String : AnyObject], context: nil).size
+//        return size
+//    }
     
     override init() { }
 
